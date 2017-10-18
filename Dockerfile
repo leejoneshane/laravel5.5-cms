@@ -46,7 +46,6 @@ RUN chmod 755 /usr/local/bin/*.sh \
     && composer require predis/predis \
     && composer install \
     && composer update \
-    && chown -R apache:apache /var/www \
     && sed -ri \
            -e '/^DB_HOST=/d' \
            -e '/^DB_PORT=/d' \
@@ -58,7 +57,9 @@ RUN chmod 755 /usr/local/bin/*.sh \
            -e '/^REDIS_PASSWORD=/d' \
            -e '/^CACHE_DRIVER=/d' \
            -e '/^SESSION_DRIVER=/d' \
-           /var/www/localhost/htdocs/.env
+           /var/www/localhost/htdocs/.env \
+       \
+    && chown -R apache:apache /var/www \
 
 VOLUME /var/www/localhost/htdocs
 EXPOSE 80 443 
