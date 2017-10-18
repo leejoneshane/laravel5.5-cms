@@ -10,6 +10,7 @@ if [[ "${DB_HOST}" != "db" ]]; then
 
   php artisan storage:link
   php artisan key:generate
+  chown -R apache:apache /var/www
 fi
 
 if [[ "${MAIL}" != "your@mail.addr" ]]; then
