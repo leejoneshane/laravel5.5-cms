@@ -77,10 +77,6 @@ You should use __Kitematic__ or use -e parameter in docker command to defind the
 * __CACHE_DRIVER=redis__ If you don't want to use redis, change it to __file__.
 * __SESSION_DRIVER=redis__ If you don't want to use redis, change it to __file__.
 
-<div align="center">
-<img src="https://github.com/leejoneshane/laravel/blob/master/kitematic.png?raw=true">
-</div>
-
 # Work with SSL
 
 This image can use letsencrypt SSL certificate, but before send request to letsencrypt, you should registered a FQDN and complete DNS configuration. use the environment variable below to tell the container:
