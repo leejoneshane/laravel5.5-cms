@@ -43,6 +43,7 @@ RUN chmod 755 /usr/local/bin/*.sh \
     && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer \
     && git clone https://github.com/bestmomo/laravel5-5-example.git /var/www/localhost/htdocs \
     && cp .env.example .env \
+    && composer require predis/predis \
     && composer install --no-ansi --no-dev --no-interaction --no-progress --no-scripts --optimize-autoloader \
     && composer update --no-ansi --no-dev --no-interaction --no-progress --no-scripts --optimize-autoloader \
     && chown -R apache:apache /var/www \
