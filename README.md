@@ -80,7 +80,7 @@ You should use __Kitematic__ or use -e parameter in docker command to defind the
 This image can use letsencrypt SSL certificate, but before send request to letsencrypt, you should registered a FQDN and complete DNS configuration. And you need to register a email for SSL request. use the environment variable below to tell the container:
 
 * __DOMAIN=the.site.fqdn__
-* __MAIL=admin@admin.com__
+* __MAIL=your.account@mail.com__
 
 Then you should lunch the container's console, And run the script named gencerts.sh to get SSL certificate::
 ```
