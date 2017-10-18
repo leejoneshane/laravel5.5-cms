@@ -2,9 +2,9 @@
 set -euo pipefail
 
 if [[ "${DB_HOST}" != "db" ]]; then
-  php artisan key:generate
   php artisan storage:link
   php artisan migrate
+  php artisan key:generate
 fi
 
 if [[ "${MAIL}" != "your@mail.addr" ]]; then
