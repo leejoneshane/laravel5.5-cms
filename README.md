@@ -58,7 +58,7 @@ If this is the second container on your computer, then it's ip will be 172.17.0.
 
 Now, you can lunch laravel like below:
 ```
-docker run --name=laravel -p 80:80 -p 443:443 -d leejoneshane/laravel5.5-cms
+docker run --name=laravel -p 80:80 -p 443:443 -d leejoneshane/laravel-cms
 ```
 # First time running
 
