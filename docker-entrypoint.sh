@@ -2,7 +2,7 @@
 set -euo pipefail
 
 if [[ "${DB_HOST}" != "db" ]]; then
-  if mysqlshow --host=${DB_HOST} --user=${DB_USER} --password=${DB_PASSWORD} ${DB_DATABASE}; then
+  if mysqlshow --host=${DB_HOST} --user=${DB_USERNAME} --password=${DB_PASSWORD} ${DB_DATABASE}; then
     echo "database exist!"
   else
     php artisan migrate --seed
