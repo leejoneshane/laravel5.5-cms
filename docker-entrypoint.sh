@@ -3,7 +3,7 @@ set -euo pipefail
 
 if [[ "${DB_HOST}" != "db" ]]; then
   php artisan storage:link
-  php artisan migrate
+  php artisan migrate --seed
   php artisan key:generate
 fi
 
