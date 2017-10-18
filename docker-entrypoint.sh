@@ -4,8 +4,7 @@ set -euo pipefail
 if [[ "${DB_HOST}" != "db" ]]; then
   php artisan key:generate
   php artisan storage:link
-  php artisan migrate --seed
-  chown -R apache:apache /var/www
+  php artisan migrate
 fi
 
 if [[ "${MAIL}" != "your@mail.addr" ]]; then
