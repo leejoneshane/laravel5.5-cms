@@ -59,7 +59,7 @@ RUN chmod 755 /usr/local/bin/*.sh \
            -e '/^SESSION_DRIVER=/d' \
            /var/www/localhost/htdocs/.env \
        \
-    && chown -R apache:apache /var/www \
+    && chown -R apache:apache /var/www
 
 VOLUME /var/www/localhost/htdocs
 EXPOSE 80 443 
