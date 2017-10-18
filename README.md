@@ -64,8 +64,6 @@ docker run --name=laravel -p 80:80 -p 443:443 -d leejoneshane/laravel5.5-cms
 
 You should use __Kitematic__ or use -e parameter in docker command to defind the environment variable list below to tell laravel container how to start:
 
-* __MAIL=admin@admin.com__ This will be your admin account.
-* __WEB_PASSWORD=your.password__ You need to change it.
 * __DB_HOST=172.17.0.2__ Link to mysql container.
 * __DB_PORT=3306__ If you use another port change this, or you can bypass it.
 * __DB_DATABASE=laravel__ If you use another name change this, or you can bypass it.
@@ -81,7 +79,8 @@ You should use __Kitematic__ or use -e parameter in docker command to defind the
 
 This image can use letsencrypt SSL certificate, but before send request to letsencrypt, you should registered a FQDN and complete DNS configuration. use the environment variable below to tell the container:
 
-__DOMAIN=the.site.fqdn__
+* __DOMAIN=the.site.fqdn__
+* __MAIL=admin@admin.com__ This will be your admin account.
 
 Then you should lunch the container's console, And run the script named gencerts.sh to get SSL certificate::
 ```
