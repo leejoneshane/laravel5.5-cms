@@ -42,11 +42,8 @@ RUN chmod 755 /usr/local/bin/*.sh \
        \
     && rm -f index.html \
     && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer \
-    && /usr/bin/composer create-project laravel/laravel /var/www/localhost/htdocs --no-progress --prefer-dist \
-    && composer require predis/predis \
-                        cloudcreativity/laravel-json-api \
-                        laravel/passport \
-                        tcg/voyager \
+    && git clone https://github.com/bestmomo/laravel5-5-example.git \
+    && composer install && composer update \
     && chown -R apache:apache /var/www \
     && sed -ri \
            -e '/^DB_HOST=/d' \
