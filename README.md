@@ -1,7 +1,46 @@
-# laravel
-This is a docker image for PHP framework: laravel, it has pre-installed predis/predis(for redis cache), cloudcreativity/laravel-json-api, laravel/passport(for OAUTH2 server), tcg/voyager(the powerful admin panel).
+# laravel5.5-cms
 
-The size just 88MB since it build on Alpine.
+This is a docker image contained Laravel 5-5 tutorial application, which is a cms come from github project: [bestmomo/laravel5-5-example](https://github.com/bestmomo/laravel5-5-example).
+
+
+## Include
+
+[Styleshout](https://www.styleshout.com/) for front template
+[CKEditor](http://ckeditor.com/) the great editor
+[Elfinder](https://github.com/Studio-42/elFinder) the nice file manager
+[Sweat Alert](http://t4t5.github.io/sweetalert/) for the cool alerts
+[AdminLTE](https://adminlte.io/themes/AdminLTE/index2.html) the great admin template
+[Gravatar](https://github.com/creativeorange/gravatar) the Gravatar package
+[Intervention Image](http://image.intervention.io/) for image manipulation
+[Email confirmation](https://github.com/bestmomo/laravel-email-confirmation) the package for email confirmation
+[Artisan language](https://github.com/bestmomo/laravel-artisan-language) the package for language strings management
+[Laravel debugbar](https://github.com/barryvdh/laravel-debugbar)
+[Etrepat baum](https://github.com/etrepat/baum) for comments management
+
+## Features
+
+Home page
+Custom error pages 403, 404 and 503
+Authentication (registration, login, logout, password reset, mail confirmation, throttle)
+Users roles : administrator (all access), redactor (create and edit post, upload and use medias in personnal directory), and user (create comment in blog)
+Blog with nested comments
+Search in posts
+Tags on posts
+Contact us page
+Admin dashboard with users, posts, articles, medias, settings, notifications and comments
+Multi users medias gestion
+Localization
+Application tests
+Thumbs creation for images
+Notifications to send emails and notify redactors for new comments
+
+## Tricks
+To use application the database is seeding with users :
+
+Administrator : email = admin@la.fr, password = admin
+Redactor : email = redac@la.fr, password = redac
+User : email = walker@la.fr, password = walker
+User : email = slacker@la.fr, password = slacker
 
 # How to use
 This image not include database and redis. You should run mysql first, like below:
@@ -18,7 +57,7 @@ If this is the second container on your computer, then it's ip will be 172.17.0.
 
 Now, you can lunch laravel like below:
 ```
-docker run --name=laravel -p 80:80 -p 443:443 -d leejoneshane/laravel
+docker run --name=laravel -p 80:80 -p 443:443 -d leejoneshane/laravel5.5-cms
 ```
 # First time running
 
